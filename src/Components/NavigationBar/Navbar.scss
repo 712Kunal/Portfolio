@@ -1,0 +1,25 @@
+
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+.socials{
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 5%;
+
+    a{
+        img{
+            height: 80px;
+            width: 80px;
+        }
+    }
+   
+}
+
+}

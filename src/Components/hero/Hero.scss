@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+.heroSection {
+    height: calc(100vh - 100px);
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    overflow: hidden;
+    position: relative;
+
+    .wrapper {
+        max-width: 1366px;
+        height: 100%;
+        margin: auto;
+        position: relative;
+        top: 20%;
+        left: 10%;
+
+        .textContainer {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .buttons {
+                display: flex;
+                gap: 10px;
+
+                button {
+                    padding: 10px;
+                    font-size: 1.1rem;
+                    font-weight: 300px;
+                    background: linear-gradient(to right, #e7005e, #b5179e, #7209b7);
+                    // background-color: transparent;
+                    // border: 1px solid white;
+                    border-radius: 10px;
+                    color: white;
+                    text-align: center;
+                }
+            }
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 600;
+                color: rebeccapurple;
+                letter-spacing: 8px;
+            }
+
+            span {
+                font-weight: bold;
+                font-family: "Playball", cursive;
+                font-weight: 400;
+                font-size: 5rem;
+                letter-spacing: 5px;
+                font-style: normal;
+            }
+
+            h1 {
+                font-size: 5rem;
+            }
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    .slidingTextContainer{
+        position: absolute;
+        font-size: 50vh;
+        bottom: -138px;
+        white-space: nowrap;
+        color: #ffffff2f;
+        z-index: 0;
+        width: 50%;
+        font-weight: bold;
+    }
+
+    .imageContainer {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 100px;
+    }
+}
