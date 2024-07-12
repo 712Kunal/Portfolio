@@ -1,16 +1,20 @@
 {
+  "homepage": "https://712Kunal.github.io/My-Portfolio",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "framer-motion": "^10.16.4",
+    "gh-pages": "^6.1.1",
     "icons": "^1.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
