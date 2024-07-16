@@ -3,6 +3,7 @@ import "./Hero.scss"
 import { motion } from "framer-motion"
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
+import me from "../../assets/Me.png"
 
 const textVariants = {
     initial: {
@@ -81,7 +82,7 @@ function Hero() {
             </motion.div>
 
             <div className="imageContainer">
-                <img src="../../assets/Me.png" alt="heroImage" />
+                <img src={me} alt="heroImage" />
             </div>
         </div>
     )
