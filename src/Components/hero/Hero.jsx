@@ -81,7 +81,7 @@ function Hero() {
             </motion.div>
 
             <div className="imageContainer">
-                <img src="/Me.png" alt="heroImage" />
+                <img src="../../assets/Me.png" alt="heroImage" />
             </div>
         </div>
     )
