@@ -3,7 +3,7 @@ import "./Hero.scss"
 import { motion } from "framer-motion"
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
-import me from "../../assets/assets/Me.png"
+import me from "../../assets/Me.png"
 import scroll from "../../assets/scroll.png"
 
 const textVariants = {
