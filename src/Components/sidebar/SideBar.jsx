@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Links from '../Links/Links'
 import ToggleBtn from '../togglebutton/ToggleBtn'
 import { delay, motion } from "framer-motion"
+import "./SideBar.scss"
 
 function SideBar() {
   const [open, setOpen] = useState(false);
@@ -26,9 +27,9 @@ function SideBar() {
   }
 
   return (
-    <motion.div className='flex flex-col items-center justify-center
-     text-black z-50' animate={open ? "open" : "closed"}>
-      <motion.div className="fixed top-0 left-0 bottom-0 bg-white w-72" variants={circlevariants}>
+    <motion.div className="outer-side flex flex-col items-center justify-center
+     text-black z-50" animate={open ? "open" : "closed"}>
+      <motion.div className="inner-side fixed top-0 left-0 bottom-0 bg-white w-72" variants={circlevariants}>
         <Links setOpen={setOpen} open={open} />
       </motion.div>
       <ToggleBtn setOpen={setOpen} open={open} />

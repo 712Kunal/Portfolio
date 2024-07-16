@@ -1,7 +1,8 @@
 import React from 'react'
 import "./Hero.scss"
 import { motion } from "framer-motion"
-
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
 
 const textVariants = {
     initial: {
@@ -39,6 +40,21 @@ const sliderVariants = {
         }
     }
 }
+
+const handleSubmit = () => {
+    const contact = document.querySelector('#Contact');
+    contact.scrollIntoView({ behavior: "instant" });
+}
+
+const handleResume = () => {
+    window.open("https://drive.google.com/file/d/1Iv5h8z0GGqDGa8Z0Nirot6rZK7toIMwZ/view?usp=drive_link", "_blank");
+}
+
+const handlescroll = () => {
+    const scroll = document.querySelector("#Home");
+    scroll.scrollIntoView({ behavior: "smooth" });
+}
+
 function Hero() {
     return (
         <div className="heroSection">
@@ -52,10 +68,10 @@ function Hero() {
                     </motion.span>
                     <motion.h2>Junior Frontend Developer</motion.h2>
                     <motion.div className="buttons">
-                        <button>See the Latest Works</button>
-                        <button>Contact Me</button>
+                        <button onClick={handleResume}>Resume <FaExternalLinkAlt /></button>
+                        <button onClick={handleSubmit}>Contact Me <FaPhone /></button>
                     </motion.div>
-                    <motion.img src="/scroll.png" alt="scroll" variants={textVariants} animate="scrollButton" />
+                    <motion.img onClick={handlescroll} src="/scroll.png" alt="scroll" variants={textVariants} animate="scrollButton" />
                 </motion.div>
             </div>
 

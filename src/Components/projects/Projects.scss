@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import "../../App.scss";
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h1 {
+        font-size: 5rem;
+        font-family: "Great Vibes", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #ff758f;
+
+        @include mobile{
+            font-size: 4.5rem;
+        }
+    }
+
+    .projects {
+        max-width: 1366px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center; 
+        gap: 60px;
+
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+
+        .single-project {
+            background: linear-gradient(to top, #051923, #006494, #00a6fb);
+            padding: 12px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.364);
+            width: 400px;
+
+            @include mobile{
+                width: 340px;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .Intro {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+
+                .stack {
+                    display: flex;
+                    gap: 20px;
+                    padding: 10px;
+                    border-radius: 20px;
+                    background-color: #000000c1;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                margin-top: 10px;
+                letter-spacing: 2px;
+            }
+
+            .buttons {
+                margin-top: 20px;
+                display: flex;
+                gap: 50px;
+
+                button {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        border-radius: 12px;
+                        background-color: rgba(0, 0, 0, 0.841);
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

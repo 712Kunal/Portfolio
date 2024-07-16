@@ -1,6 +1,9 @@
 import React from 'react'
 import { motion } from "framer-motion"
 
+//for media queries - 
+import "./Links.scss"
+
 function Links(props) {
 
   const linksVariants = {
@@ -37,8 +40,7 @@ function Links(props) {
   ];
 
   return (
-    <motion.div className='absolute w-full h-full flex flex-col items-center justify-center
-    gap-5' variants={linksVariants} initial="closed" animate={props.open ? "open" : "closed" }>
+    <motion.div className="Links" variants={linksVariants} initial="closed" animate={props.open ? "open" : "closed" }>
       {
         navitems.map(
           (item) => (

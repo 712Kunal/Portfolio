@@ -1,0 +1,9 @@
+@import "../../App.scss";
+
+.outer-side{
+    .inner-side{
+        @include mobile {
+            width: 12rem;  
+        }
+    }
+}

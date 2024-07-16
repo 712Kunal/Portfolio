@@ -1,9 +1,16 @@
 
+@import "../../App.scss";
+
 .navbar {
+    width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+        justify-content: flex-end;   
+    }
 
 .socials{
     display: flex;
@@ -13,10 +20,16 @@
     position: relative;
     right: 5%;
 
+
     a{
         img{
             height: 80px;
             width: 80px;
+
+            @include mobile {
+                height: 50px;
+                width: 50px;
+            }
         }
     }
    

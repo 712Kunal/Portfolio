@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { motion } from "framer-motion";
+import "./About.scss"
 
 const imgVariants = {
   initial: {
@@ -32,7 +33,7 @@ const boxVariants = {
 
 const textVariants = {
   initial: {
-    x: -500
+    x: -300
   },
   animate: {
     x: 0,
@@ -45,10 +46,22 @@ const textVariants = {
 }
 
 function About() {
+
+  const [mobilewidth, setmobileWidth] = useState(window.innerWidth<=768)
+
+  useEffect(() => {
+    const handleResize = () => setmobileWidth(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <div className='max-w-[1366px] h-full flex flex-wrap justify-center items-center overflow-hidden'>
+    <div className="outer-container max-w-[1366px] h-full flex flex-wrap justify-center items-center overflow-hidden">
       <motion.div
-        className='relative -bottom-9 p-6'
+        className="img-container relative -bottom-9 p-6"
         variants={imgVariants}
         initial="initial"
         whileInView="animate"
@@ -57,8 +70,8 @@ function About() {
          src="/About2.png" alt="aboutImage" />
       </motion.div>
 
-      <div className='w-1/2 flex flex-col flex-wrap gap-2'>
-        <div className='flex gap-5 relative -top-5'>
+      <div className="edu-work w-1/2 flex flex-col flex-wrap gap-2">
+        <div className="edu flex gap-5 relative -top-5">
           <motion.div
             className='border-[1px] p-5 rounded-2xl max-w-72 border-[#ffffffab] shadow-xl shadow-cyan-500/50'
             variants={boxVariants}
@@ -90,7 +103,8 @@ function About() {
           </motion.div>
         </div>
 
-        <motion.p className='text-xl tracking-widest font-mono' variants={textVariants} initial="initial" whileInView="animate">
+        {mobilewidth ? (
+          <motion.p className="aboutpara" variants={textVariants} initial="initial" whileInView="animate">
           I'm Kunal Jadhav, a Computer Engineering student passionate about technology and
           software development. I'm proficient in core languages like C, C++ and JavaScript.
           I specialize in creating dynamic user interfaces using HTML, CSS, and JavaScript.
@@ -98,6 +112,17 @@ function About() {
           Tailwind CSS and SCSS for frontend development. Dedicated to becoming a Full-Stack
           developer. I'm also more dedicated to real-life problem-solving aspects and many more...
         </motion.p>
+        ) : (
+          <motion.p className="aboutpara text-xl tracking-widest font-mono" variants={textVariants} initial="initial" whileInView="animate">
+          I'm Kunal Jadhav, a Computer Engineering student passionate about technology and
+          software development. I'm proficient in core languages like C, C++ and JavaScript.
+          I specialize in creating dynamic user interfaces using HTML, CSS, and JavaScript.
+          Recently, I have expanded my skill set to include React.js, also familiar with
+          Tailwind CSS and SCSS for frontend development. Dedicated to becoming a Full-Stack
+          developer. I'm also more dedicated to real-life problem-solving aspects and many more...
+        </motion.p>
+        ) }
+        
       </div>
     </div>
   );
