@@ -3,7 +3,8 @@ import "./Hero.scss"
 import { motion } from "framer-motion"
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
-import me from "../../assets/Me.png"
+import me from "../../assets/assets/Me.png"
+import scroll from "../../assets/scroll.png"
 
 const textVariants = {
     initial: {
@@ -72,7 +73,7 @@ function Hero() {
                         <button onClick={handleResume}>Resume <FaExternalLinkAlt /></button>
                         <button onClick={handleSubmit}>Contact Me <FaPhone /></button>
                     </motion.div>
-                    <motion.img onClick={handlescroll} src="/scroll.png" alt="scroll" variants={textVariants} animate="scrollButton" />
+                    <motion.img onClick={handlescroll} src={scroll} alt="scroll" variants={textVariants} animate="scrollButton" />
                 </motion.div>
             </div>
 
