@@ -16,9 +16,9 @@ function Navbar() {
           stiffness: 100,
           damping: 30
         }}>
-        <a href="https://www.linkedin.com/in/kunal-jadhav-9145ab257/"><img className='linkedin' src={linkedin} alt="linkedin" /></a>
-        <a href="https://github.com/712Kunal"><img src={git} alt="github" /></a>
-        <a href="https://www.instagram.com/kunal_712_/?next=%2F"><img src={insta} alt="instagram" /></a>
+        <a href="https://www.linkedin.com/in/kunal-jadhav-9145ab257/" target='_blank'><img className='linkedin' src={linkedin} alt="linkedin" /></a>
+        <a href="https://github.com/712Kunal" target='_blank'><img src={git} alt="github" /></a>
+        <a href="https://www.instagram.com/kunal_712_/?next=%2F" target='_blank'><img src={insta} alt="instagram" /></a>
       </motion.div>
     </div>
   )

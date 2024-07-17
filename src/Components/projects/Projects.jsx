@@ -2,6 +2,10 @@ import React from 'react'
 import "./Projects.scss"
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion"
+import Appwrite from "../../assets/appwrite.png"
+import Pexelet from "../../assets/pexelet.png"
+import Global from "../../assets/global.png"
+import Currency from "../../assets/currency.png"
 
 function Projects() {
     const projectBox = {
@@ -38,7 +42,7 @@ function Projects() {
 
             <motion.div className='projects' variants={projectBox} initial="initial" whileInView="animate">
                 <motion.div className='single-project' variants={projectItem}>
-                    <img src="/appwrite.png" alt="appwrite" />
+                    <img src={Appwrite} alt="appwrite" />
                     <div className="Intro">
                         <h2>Appwrite MegaBlog</h2>
                         <div className="stack">
@@ -59,7 +63,7 @@ function Projects() {
                 </motion.div>
 
                 <motion.div className='single-project' variants={projectItem}>
-                    <img src="/pexelet.png" alt="pexelet" />
+                    <img src={Pexelet} alt="pexelet" />
                     <div className="Intro">
                         <h2>Pexelet</h2>
                         <div className="stack">
@@ -80,7 +84,7 @@ function Projects() {
                 </motion.div>
 
                 <motion.div className='single-project' variants={projectItem}>
-                    <img src="/global.png" alt="global" />
+                    <img src={Global} alt="global" />
                     <div className="Intro">
                         <h2>Global Updates</h2>
                         <div className="stack">
@@ -101,7 +105,7 @@ function Projects() {
                 </motion.div>
 
                 <motion.div className='single-project' variants={projectItem}>
-                    <img src="/currency.png" alt="currency" />
+                    <img src={Currency} alt="currency" />
                     <div className="Intro">
                         <h2>Currency Converter</h2>
                         <div className="stack">

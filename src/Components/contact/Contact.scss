@@ -28,7 +28,7 @@
             gap: 10px;
             text-align: center;
             align-items: center;
-            margin-top: 60px;
+            margin-top: 40px;
         }
 
         h1 {
@@ -38,6 +38,7 @@
             @include mobile{
                 line-height: 40px;
                 font-size: 50px;
+                margin-bottom: 10px;
             }
         }
 
@@ -47,7 +48,12 @@
             gap: 20px;
 
             @include mobile{
-                margin-top: 10px;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                flex-wrap: wrap;
+                margin-top: 5px;
                 gap: 2px;
             }
 
@@ -66,7 +72,7 @@
         z-index: 20;
 
         @include mobile{
-            padding: 0px 10px 10px 10px;
+            padding: 0px 50px 80px 50px;
             width: 100%;
         }
 
@@ -84,8 +90,8 @@
                 stroke: #e7005e;
 
                 @include mobile{
-                    width: 350px;
-                    height: 350px;
+                    width: 250px;
+                    height: 250px;
                 }
             }
         }
@@ -94,6 +100,11 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            z-index: 50;
+
+            @include mobile{
+                gap: 10px;
+            }
 
             input {
                 padding: 20px;
@@ -101,6 +112,10 @@
                 border: 1px solid #ccc;
                 border-radius: 12px;
                 color: white;
+
+                @include mobile{
+                    padding: 10px;
+                }
             }
 
             textarea{
@@ -108,6 +123,10 @@
                 padding: 20px;
                 background-color: rgba(0, 0, 0, 0.76);
                 color: white;
+
+                @include mobile{
+                    padding: 10px;
+                }
             }
             button{
                 padding: 10px;
@@ -115,6 +134,11 @@
                 font-size: 1.4rem;
                 background: linear-gradient(to right, #e7005e, #b5179e, #7209b7);
                 border-radius: 12px;
+
+                @include mobile{
+                    padding: 2px;
+                    font-size: 1.2rem;
+                }
             }
         }
     }

@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./Parallax.scss";
+import planets from "../../assets/planets.png"
+import sun from "../../assets/sun.png"
+
 
 function Parallax(props) {
     const elementRef = useRef();
@@ -21,7 +24,7 @@ function Parallax(props) {
             <motion.div className="mountains"></motion.div>
             <motion.div style={{
                 y: yBg,
-                backgroundImage: `url(${props.type === "About" ? "/planets.png" : "/sun.png"})`
+                backgroundImage: `url(${props.type === "About" ? planets : sun})`
             }} className="planets"></motion.div>
             <motion.div style={{ x: yBg }} className="stars"></motion.div>
         </div>

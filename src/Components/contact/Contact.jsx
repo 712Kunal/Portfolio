@@ -91,7 +91,6 @@ function Contact() {
                 </div>
 
             </motion.div>
-
             <div className="formContainer">
                 <motion.div className="phoneSvg" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }}>
                     <svg width="450px" height="450px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
@@ -112,6 +111,7 @@ function Contact() {
                             3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#f6f93e"></path></g>
                     </svg>
                 </motion.div>
+
                 <motion.form
                     ref={formRef}
                     onSubmit={sendEmail}

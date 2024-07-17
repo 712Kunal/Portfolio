@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import { motion } from "framer-motion";
 import "./About.scss"
+import mineportrait from "../../assets/About2.png"
 
 const imgVariants = {
   initial: {
@@ -67,7 +68,7 @@ function About() {
         whileInView="animate"
       >
         <img className='w-full h-full rounded-3xl hover:grayscale cursor-pointer shadow-md shadow-cyan-200'
-         src="/About2.png" alt="aboutImage" />
+         src={mineportrait} alt="aboutImage" />
       </motion.div>
 
       <div className="edu-work w-1/2 flex flex-col flex-wrap gap-2">
