@@ -49,7 +49,7 @@ const handleSubmit = () => {
 }
 
 const handleResume = () => {
-    window.open("", "_blank");
+    window.open("https://drive.google.com/file/d/1SaMvP0iuF7W8_Rak31GXx0hqN0xOtpYQ/view?usp=drive_link", "_blank");
 }
 
 const handlescroll = () => {
