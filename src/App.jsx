@@ -33,7 +33,7 @@ function App() {
       </section>
 
       <div className="no-snap">
-      <Projects />
+        <Projects />
       </div>
 
       <section id="Contact">
