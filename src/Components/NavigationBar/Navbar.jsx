@@ -5,6 +5,7 @@ import SideBar from "../sidebar/SideBar";
 import linkedin from "../../assets/linkedin.png";
 import insta from "../../assets/instagram.png";
 import git from "../../assets/github.png";
+import twitter from "../../assets/twitter.jpg";
 
 function Navbar() {
   return (
@@ -28,6 +29,9 @@ function Navbar() {
         </a>
         <a href="https://github.com/712Kunal" target="_blank">
           <img src={git} alt="github" />
+        </a>
+        <a href="https://x.com/KunalJadhav712" target="_blank">
+          <img src={twitter} alt="twitter" />
         </a>
         <a
           href="https://www.instagram.com/kunal_712_/?next=%2F"
