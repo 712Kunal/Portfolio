@@ -78,7 +78,7 @@ function Hero() {
           >
             Kunal Jadhav
           </motion.span>
-          <motion.h2>Junior Frontend Developer</motion.h2>
+          <motion.h2>Junior Fullstack Developer</motion.h2>
           <motion.div className="buttons">
             <button onClick={handleResume}>
               Resume <FaExternalLinkAlt />
@@ -103,7 +103,7 @@ function Hero() {
         initial="initial"
         animate="animate"
       >
-        Web Designer Frontend Developer
+        Web developer, Tech enthusiast
       </motion.div>
 
       <div className="imageContainer">
